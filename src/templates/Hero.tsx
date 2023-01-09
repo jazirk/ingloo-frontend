@@ -61,7 +61,7 @@ const Hero = () => (
             <div className="flex">
               <Link href="/">
                 <a>
-                  <div className="flex font-normal border border-[#979DAF] border-r-0 rounded-l-full py-4 px-8">
+                  <div className="flex gap-2 font-normal border border-[#979DAF] border-r-0 rounded-l-full py-4 px-8">
                     <img src={investorLogo.src} alt="Signin" className="h-6" />
                     Investor
                   </div>
@@ -70,7 +70,7 @@ const Hero = () => (
               <div className="border border-[#979DAF] mt-2 mb-2" />
               <Link href="/">
                 <a>
-                  <div className="flex font-normal border border-[#979DAF] border-l-0 rounded-r-full py-4 px-8">
+                  <div className="flex gap-2 font-normal border border-[#979DAF] border-l-0 rounded-r-full py-4 px-8">
                     <img src={companyLogo.src} alt="Signin" />
                     Company
                   </div>
