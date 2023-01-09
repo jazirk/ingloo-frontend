@@ -9,12 +9,12 @@ import { Background } from '../background/Background';
 import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
-import { NavbarThreeColumns } from '../navigation/NavbarThreeColumns';
+import { Navbar } from '../navigation/Navbar';
 
 const Hero = () => (
   <Background color="bg-white">
     <Section yPadding="py-4" border="border-b border-b-[#E0E0E0]">
-      <NavbarThreeColumns
+      <Navbar
         logo={logo.src}
         button={
           <Button rounded>
@@ -43,7 +43,7 @@ const Hero = () => (
             <a>Resources</a>
           </Link>
         </li>
-      </NavbarThreeColumns>
+      </Navbar>
     </Section>
 
     <Section yPadding="pt-8 lg:pt-20 pb-8 lg:pb-32">

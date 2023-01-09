@@ -8,7 +8,7 @@ type INavbarProps = {
   button?: ReactNode;
 };
 
-const NavbarThreeColumns = (props: INavbarProps) => (
+const Navbar = (props: INavbarProps) => (
   <div className="flex flex-wrap justify-between items-center gap-2">
     <div>
       <Link href="/">
@@ -44,4 +44,4 @@ const NavbarThreeColumns = (props: INavbarProps) => (
   </div>
 );
 
-export { NavbarThreeColumns };
+export { Navbar };
