@@ -3,23 +3,28 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 type INavbarProps = {
-  logo: ReactNode;
+  logo: string | undefined;
   children: ReactNode;
+  button?: ReactNode;
 };
 
-const NavbarTwoColumns = (props: INavbarProps) => (
-  <div className="flex flex-wrap justify-between items-center">
+const Navbar = (props: INavbarProps) => (
+  <div className="flex flex-wrap justify-between items-center gap-2">
     <div>
       <Link href="/">
-        <a>{props.logo}</a>
+        <a>
+          <img src={props.logo} alt="Logo" />
+        </a>
       </Link>
     </div>
 
     <nav>
-      <ul className="navbar flex items-center font-medium text-xl text-gray-800">
+      <ul className="navbar flex items-center font-normal text-base text-gray-800">
         {props.children}
       </ul>
     </nav>
+
+    {props.button}
 
     <style jsx>
       {`
@@ -30,9 +35,13 @@ const NavbarTwoColumns = (props: INavbarProps) => (
         .navbar :global(li:not(:last-child)) {
           @apply mr-5;
         }
+
+        .navbar :global(li) {
+          @apply text-base;
+        }
       `}
     </style>
   </div>
 );
 
-export { NavbarTwoColumns };
+export { Navbar };
