@@ -2,12 +2,12 @@ import { ReactNode } from 'react';
 
 import className from 'classnames';
 
-type IButtonProps = {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
   xl?: boolean;
   rounded?: boolean;
   classname?: string;
   children: ReactNode;
-};
+}
 
 const Button = (props: IButtonProps) => {
   const btnClass = className({
@@ -18,9 +18,11 @@ const Button = (props: IButtonProps) => {
     'btn-rounded': props.rounded,
   });
 
+  const { children, ...rest } = props;
+
   return (
-    <div className={`${btnClass} ${props.classname}`}>
-      {props.children}
+    <div className={`${btnClass} ${props.classname}`} {...rest}>
+      {children}
 
       <style jsx>
         {`
@@ -37,11 +39,13 @@ const Button = (props: IButtonProps) => {
           }
 
           .btn-primary {
+            @apply cursor-pointer;
             @apply text-[#F85C3A] border-x-[#F85C3A] border-y-[#F85C3A] border-solid border;
           }
 
           .btn-primary:hover {
-            @apply bg-primary-100;
+            @apply bg-[#F85C3A];
+            @apply text-white;
           }
 
           .btn-rounded {
