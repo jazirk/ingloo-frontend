@@ -5,7 +5,7 @@ import { Section } from '../layout/Section';
 const WhatWeDo = () => (
   <Background color="bg-white border border-[#E0E0E0]">
     <Section yPadding="py-4">
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row text-black">
         <div className="w-full lg:w-1/2 mx-2 lg:m-auto pr-0 sm:pr-16 lg:pr-20">
           <div className="font-semibold text-base text-[#F85C3A] mt-16 lg:mt-0 ">
             Who are we?

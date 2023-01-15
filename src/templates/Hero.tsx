@@ -15,6 +15,7 @@ import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { Navbar } from '../navigation/Navbar';
+import { headerLinks } from '../utils/HeadeLink';
 
 const Hero = () => {
   const [signinImageSrc, setSigninImageSrc] = useState(signinLogo);
@@ -33,30 +34,54 @@ const Hero = () => {
               onMouseLeave={() => setSigninImageSrc(signinLogo)}
             >
               <img src={signinImageSrc.src} alt="Signin" />
-              Signin
+              Sign in
             </Button>
           }
         >
+          {headerLinks.map((link) => (
+            <li key={link.label}>
+              <a
+                onClick={() =>
+                  document.querySelector(link.href)?.scrollIntoView({
+                    behavior: 'smooth',
+                  })
+                }
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
           <li>
-            <Link href="/">
-              <a>About Us</a>
-            </Link>
+            <a className="dropdown dropdown-hover link">
+              <label tabIndex={0} className="m-1">
+                Resources
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow w-52 bg-white"
+              >
+                <li className="resource">Resource 1</li>
+                <li className="resource">Resource 2</li>
+              </ul>
+            </a>
           </li>
-          <li>
-            <Link href="/">
-              <a>Offerings</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Investors</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Resources</a>
-            </Link>
-          </li>
+
+          <style jsx>{`
+            .link {
+              text-decoration: none;
+            }
+            .link:hover {
+              @apply font-bold;
+              scale: 1.1;
+              color: #f85c3a;
+            }
+
+            .resource {
+              @apply text-black;
+              @apply font-normal;
+              @apply text-sm;
+            }
+          `}</style>
         </Navbar>
       </Section>
 
@@ -71,8 +96,10 @@ const Hero = () => {
           description="Leading the Way in Healthcare Investing: We Offer Exceptional Returns for Investors and Companies"
           button={
             <div className="">
-              <div className="text-2xl font-bold mb-6">Choose your journey</div>
-              <div className="flex">
+              <div className="text-2xl font-bold mb-6 text-black">
+                Choose your journey
+              </div>
+              <div className="flex text-black">
                 <Link href="/">
                   <a>
                     <div

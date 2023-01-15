@@ -7,6 +7,8 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
   rounded?: boolean;
   classname?: string;
   children: ReactNode;
+  secondary?: boolean;
+  transparent?: boolean;
 }
 
 const Button = (props: IButtonProps) => {
@@ -14,11 +16,14 @@ const Button = (props: IButtonProps) => {
     btn: true,
     'btn-xl': props.xl,
     'btn-base': !props.xl,
-    'btn-primary': true,
+    'btn-primary': !props.secondary && !props.transparent,
+    'btn-secondary': props.secondary,
     'btn-rounded': props.rounded,
+    'btn-transparent': props.transparent,
   });
 
-  const { children, ...rest } = props;
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  const { children, rounded, secondary, transparent, ...rest } = props;
 
   return (
     <div className={`${btnClass} ${props.classname}`} {...rest}>
@@ -27,6 +32,8 @@ const Button = (props: IButtonProps) => {
       <style jsx>
         {`
           .btn {
+            @apply normal-case;
+            @apply cursor-pointer;
             @apply flex text-center gap-2;
           }
 
@@ -40,7 +47,7 @@ const Button = (props: IButtonProps) => {
 
           .btn-primary {
             @apply cursor-pointer;
-            @apply text-[#F85C3A] border-x-[#F85C3A] border-y-[#F85C3A] border-solid border;
+            @apply text-[#F85C3A] border-x-[#F85C3A] border-y-[#F85C3A] border-solid border bg-white;
           }
 
           .btn-primary:hover {
@@ -48,8 +55,18 @@ const Button = (props: IButtonProps) => {
             @apply text-white;
           }
 
+          .btn-secondary {
+            @apply text-white border-x-[#F85C3A] border-y-[#F85C3A] border-solid border bg-[#F85C3A];
+          }
+
           .btn-rounded {
             @apply rounded-full;
+          }
+
+          .btn-transparent {
+            @apply border-white;
+            @apply text-white;
+            background-color: transparent;
           }
         `}
       </style>

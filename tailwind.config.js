@@ -38,10 +38,14 @@ module.exports = {
           900: '#1a202c',
         },
       },
+      backgroundImage: {
+        healthcare: "url('/images/healthcare.svg')",
+      },
       lineHeight: {
         hero: '4.5rem',
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line global-require
+  plugins: [require('daisyui')],
 };
