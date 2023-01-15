@@ -1,7 +1,7 @@
 import arrowRight from '../../public/assets/images/arrow-right-line.svg';
 import inittiativeImage from '../../public/assets/images/initiative-figure.svg';
 import initiatives from '../../public/assets/images/initiatives.svg';
-import inVite from '../../public/assets/images/inVite.svg';
+import inVite from '../../public/assets/images/invite.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 import companyLogo from '../../public/assets/images/company.svg';
@@ -33,7 +34,7 @@ const Hero = () => {
               onMouseOver={() => setSigninImageSrc(signinLogoWhite)}
               onMouseLeave={() => setSigninImageSrc(signinLogo)}
             >
-              <img src={signinImageSrc.src} alt="Signin" />
+              <Image src={signinImageSrc} alt="Signin" />
               Sign in
             </Button>
           }
@@ -107,11 +108,7 @@ const Hero = () => {
                       onMouseLeave={() => setInvestorImageSrc(investorLogo)}
                       className="flex gap-2 font-normal border border-[#979DAF] border-r-0 rounded-l-full py-4 px-8 hover:bg-[#F85C3A] hover:text-white"
                     >
-                      <img
-                        src={investorImageSrc.src}
-                        alt="Signin"
-                        className="h-6"
-                      />
+                      <Image src={investorImageSrc} alt="Investor" />
                       Investor
                     </div>
                   </a>
@@ -124,7 +121,7 @@ const Hero = () => {
                       onMouseLeave={() => setCompanyImageSrc(companyLogo)}
                       className="flex gap-2 font-normal border border-[#979DAF] border-l-0 rounded-r-full py-4 px-8 hover:bg-[#F85C3A] hover:text-white"
                     >
-                      <img src={companyImageSrc.src} alt="Signin" />
+                      <Image src={companyImageSrc} alt="Company" />
                       Company
                     </div>
                   </a>
