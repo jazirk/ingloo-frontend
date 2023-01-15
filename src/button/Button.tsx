@@ -2,29 +2,38 @@ import { ReactNode } from 'react';
 
 import className from 'classnames';
 
-type IButtonProps = {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
   xl?: boolean;
   rounded?: boolean;
   classname?: string;
   children: ReactNode;
-};
+  secondary?: boolean;
+  transparent?: boolean;
+}
 
 const Button = (props: IButtonProps) => {
   const btnClass = className({
     btn: true,
     'btn-xl': props.xl,
     'btn-base': !props.xl,
-    'btn-primary': true,
+    'btn-primary': !props.secondary && !props.transparent,
+    'btn-secondary': props.secondary,
     'btn-rounded': props.rounded,
+    'btn-transparent': props.transparent,
   });
 
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  const { children, rounded, secondary, transparent, ...rest } = props;
+
   return (
-    <div className={`${btnClass} ${props.classname}`}>
-      {props.children}
+    <div className={`${btnClass} ${props.classname}`} {...rest}>
+      {children}
 
       <style jsx>
         {`
           .btn {
+            @apply normal-case;
+            @apply cursor-pointer;
             @apply flex text-center gap-2;
           }
 
@@ -37,15 +46,27 @@ const Button = (props: IButtonProps) => {
           }
 
           .btn-primary {
-            @apply text-[#F85C3A] border-x-[#F85C3A] border-y-[#F85C3A] border-solid border;
+            @apply cursor-pointer;
+            @apply text-[#F85C3A] border-x-[#F85C3A] border-y-[#F85C3A] border-solid border bg-white;
           }
 
           .btn-primary:hover {
-            @apply bg-primary-100;
+            @apply bg-[#F85C3A];
+            @apply text-white;
+          }
+
+          .btn-secondary {
+            @apply text-white border-x-[#F85C3A] border-y-[#F85C3A] border-solid border bg-[#F85C3A];
           }
 
           .btn-rounded {
             @apply rounded-full;
+          }
+
+          .btn-transparent {
+            @apply border-white;
+            @apply text-white;
+            background-color: transparent;
           }
         `}
       </style>
