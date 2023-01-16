@@ -1,16 +1,12 @@
 import Image from 'next/image';
 
-import arrowRight from '../../public/assets/images/arrow-right-line.svg';
-import initiativeImage from '../../public/assets/images/initiative-figure.svg';
-import initiatives from '../../public/assets/images/initiatives.svg';
-import inVite from '../../public/assets/images/invite.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';
 import { Carousel } from '../ui-components/Carousel';
 
 const styles = {
-  backgroundImage: `url(${initiatives})`,
+  backgroundImage: `url(${'/assets/images/initiatives.svg'})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
 };
@@ -33,13 +29,13 @@ const Initiatives = () => {
               <figure className="h-full w-full">
                 <Image
                   className="object-contain"
-                  src={initiativeImage.src}
+                  src={'/assets/images/initiative-figure.svg'}
                   alt="Initiative"
                 />
               </figure>
               <div className="card-body text-white">
                 <div className="flex items-center">
-                  <Image src={inVite} alt="InVite" />
+                  <Image src={'/assets/images/invite.svg'} alt="InVite" />
                   <span>inVite</span>
                 </div>
 
@@ -52,7 +48,10 @@ const Initiatives = () => {
                 </p>
                 <div className="card-actions justify-start cursor-pointer">
                   <div className="font-bold">Join Hub</div>
-                  <Image src={arrowRight} alt="arrow-right" />
+                  <Image
+                    src={'/assets/images/arrow-right-line.svg'}
+                    alt="arrow-right"
+                  />
                 </div>
               </div>
             </Card>
@@ -60,13 +59,13 @@ const Initiatives = () => {
               <figure className="h-full w-full">
                 <Image
                   className="object-contain"
-                  src={initiativeImage.src}
+                  src={'/assets/images/initiative-figure.svg'}
                   alt="Initiative"
                 />
               </figure>
               <div className="card-body text-white">
                 <div className="flex items-center">
-                  <Image src={inVite} alt="InVite" />
+                  <Image src={'/assets/images/invite.svg'} alt="InVite" />
                   <span>smartGlo</span>
                 </div>
 
@@ -79,7 +78,10 @@ const Initiatives = () => {
                 </p>
                 <div className="card-actions justify-start cursor-pointer">
                   <div className="font-bold">Join Hub</div>
-                  <Image src={arrowRight} alt="arrow-right" />
+                  <Image
+                    src={'/assets/images/arrow-right-line.svg'}
+                    alt="arrow-right"
+                  />
                 </div>
               </div>
             </Card>
@@ -87,13 +89,13 @@ const Initiatives = () => {
               <figure className="h-full w-full">
                 <Image
                   className="object-contain"
-                  src={initiativeImage.src}
+                  src={'/assets/images/initiative-figure.svg'}
                   alt="Initiative"
                 />
               </figure>
               <div className="card-body text-white">
                 <div className="flex items-center">
-                  <Image src={inVite} alt="InVite" />
+                  <Image src={'/assets/images/invite.svg'} alt="InVite" />
                   <span>smartGlo</span>
                 </div>
 
@@ -106,7 +108,10 @@ const Initiatives = () => {
                 </p>
                 <div className="card-actions justify-start cursor-pointer">
                   <div className="font-bold">Join Hub</div>
-                  <Image src={arrowRight} alt="arrow-right" />
+                  <Image
+                    src={'/assets/images/arrow-right-line.svg'}
+                    alt="arrow-right"
+                  />
                 </div>
               </div>
             </Card>
