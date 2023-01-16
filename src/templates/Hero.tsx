@@ -27,7 +27,7 @@ const Hero = () => {
     <Background color="bg-white">
       <Section yPadding="py-4" border="border-b border-b-[#E0E0E0]">
         <Navbar
-          logo={logo.src}
+          logo={logo}
           button={
             <Button
               rounded
@@ -130,11 +130,7 @@ const Hero = () => {
             </div>
           }
           image={
-            <img
-              src={heroImage.src}
-              alt="Hero Image"
-              className="mx-auto mt-16"
-            />
+            <Image src={heroImage} alt="Hero Image" className="mx-auto mt-16" />
           }
         />
       </Section>

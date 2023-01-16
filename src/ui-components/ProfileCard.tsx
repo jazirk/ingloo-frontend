@@ -1,4 +1,5 @@
 import className from 'classnames';
+import Image from 'next/image';
 
 interface ProfileCardProps {
   user: Record<string, any>;
@@ -12,7 +13,7 @@ const ProfileCard = ({ user }: ProfileCardProps) => {
   return (
     <div className={`card w-96 bg-white shadow-xl ${profileClass}`}>
       <figure>
-        <img src={user.image} alt="Profile Pic" />
+        <Image src={user.image} alt="Profile Pic" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{user.name}</h2>

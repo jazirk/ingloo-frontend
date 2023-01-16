@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import pitch from '../../public/assets/images/pitch.svg';
 import semiCirle from '../../public/assets/images/semi-circle.svg';
 import timelineBusiness from '../../public/assets/images/timeline-business.svg';
@@ -27,13 +29,13 @@ const Philiosophy = () => (
             market and with its own regulatory and process challenges.
           </p>
           <Button secondary rounded>
-            <img src={pitch.src} alt="Pitch" />
+            <Image src={pitch} alt="Pitch" />
             Pitch Now
           </Button>
         </div>
         <div className="text-base text-black mt-16 lg:mt-0 ">
           <div className="flex gap-5">
-            <img src={timelineStar.src} alt="Timeline Star" />
+            <Image src={timelineStar} alt="Timeline Star" />
             <div>
               <h1 className="font-semibold">Initial Rating</h1>
               <p className="max-w-prose">
@@ -44,7 +46,7 @@ const Philiosophy = () => (
             </div>
           </div>
           <div className="flex gap-5">
-            <img src={timelineBusiness.src} alt="Timeline Business" />
+            <Image src={timelineBusiness} alt="Timeline Business" />
             <div>
               <h1 className="font-semibold">Market Evaluation</h1>
               <p className="max-w-prose">
@@ -54,7 +56,7 @@ const Philiosophy = () => (
             </div>
           </div>
           <div className="flex gap-5">
-            <img src={timelineDollar.src} alt="Timeline Dollar" />
+            <Image src={timelineDollar} alt="Timeline Dollar" />
             <div>
               <h1 className="font-semibold">Initial Rating</h1>
               <p className="max-w-prose">
@@ -64,7 +66,7 @@ const Philiosophy = () => (
             </div>
           </div>
           <div className="flex gap-5">
-            <img src={timelineCheck.src} alt="Timeline Check" />
+            <Image src={timelineCheck} alt="Timeline Check" />
             <div>
               <h1 className="font-semibold">Company Auditing</h1>
               <p className="max-w-prose">
@@ -74,8 +76,8 @@ const Philiosophy = () => (
             </div>
           </div>
         </div>
-        <img
-          src={semiCirle.src}
+        <Image
+          src={semiCirle}
           alt="Semi Circle"
           className="absolute -bottom-20 left-10"
         />

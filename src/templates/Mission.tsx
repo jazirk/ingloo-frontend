@@ -3,7 +3,7 @@ import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 
 const styles = {
-  backgroundImage: `url(${mission.src})`,
+  backgroundImage: `url(${mission})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   height: '400px',

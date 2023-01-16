@@ -1,9 +1,10 @@
 import { ReactNode } from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 type INavbarProps = {
-  logo: string | undefined;
+  logo: string;
   children: ReactNode;
   button?: ReactNode;
 };
@@ -13,7 +14,7 @@ const Navbar = (props: INavbarProps) => (
     <div>
       <Link href="/">
         <a>
-          <img src={props.logo} alt="Logo" />
+          <Image src={props.logo} alt="Logo" />
         </a>
       </Link>
     </div>

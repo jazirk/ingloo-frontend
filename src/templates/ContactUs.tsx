@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import contactUsBg from '../../public/assets/images/contact-us-bg.svg';
 import contactUsIcon from '../../public/assets/images/contact-us-icon.svg';
 import { Background } from '../background/Background';
@@ -5,7 +7,7 @@ import { Button } from '../button/Button';
 import { Section } from '../layout/Section';
 
 const styles = {
-  backgroundImage: `url(${contactUsBg.src})`,
+  backgroundImage: `url(${contactUsBg})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   maxHeight: '400px',
@@ -27,7 +29,7 @@ const ContactUs = () => (
           all. We are dedicated to this cause.
         </p>
         <Button rounded transparent>
-          <img src={contactUsIcon.src} alt="Contact" />
+          <Image src={contactUsIcon} alt="Contact" />
           Contact us
         </Button>
       </div>

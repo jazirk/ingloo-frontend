@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import aboutUsBox from '../../public/assets/images/about-us-box.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
@@ -21,15 +23,15 @@ const AboutUs = () => (
             </p>
             <div className="flex flex-col gap-5">
               <div className="flex gap-3">
-                <img src={aboutUsBox.src} alt="about-us-list" />
+                <Image src={aboutUsBox} alt="about-us-list" />
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </div>
               <div className="flex gap-3">
-                <img src={aboutUsBox.src} alt="about-us-list" />
+                <Image src={aboutUsBox} alt="about-us-list" />
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </div>
               <div className="flex gap-3">
-                <img src={aboutUsBox.src} alt="about-us-list" />
+                <Image src={aboutUsBox} alt="about-us-list" />
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </div>
             </div>

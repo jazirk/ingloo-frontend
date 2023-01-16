@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import Logo from '../../public/assets/images/logo-white.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
@@ -9,7 +11,7 @@ const Footer = () => (
       <div>
         <div className="flex border-b-2 justify-between items-start border-gray-800">
           <div className="flex flex-col gap-5 w-1/2 text-white pb-10">
-            <img src={Logo.src} alt="Logo" className="w-[200px]" />
+            <Image src={Logo} alt="Logo" className="w-[200px]" />
             <h2 className="font-bold">Address :</h2>
             <p>Level 1, 12 Sample St, Sydney NSW 2000</p>
             <h2 className="font-bold">Contact :</h2>
