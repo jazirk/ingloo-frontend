@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import arrowRight from '../../public/assets/images/arrow-right-line.svg';
-import initiativeImage from '../../public/assets/images/initiative-figure.svg';
 import initiatives from '../../public/assets/images/initiatives.svg';
 import inVite from '../../public/assets/images/invite.svg';
 import { Background } from '../background/Background';
@@ -33,7 +32,7 @@ const Initiatives = () => {
               <figure className="h-full w-full">
                 <Image
                   className="object-contain"
-                  src={initiativeImage}
+                  src={'/assets/images/initiative-figure.svg'}
                   alt="Initiative"
                 />
               </figure>
@@ -60,7 +59,7 @@ const Initiatives = () => {
               <figure className="h-full w-full">
                 <Image
                   className="object-contain"
-                  src={initiativeImage}
+                  src={'/assets/images/initiative-figure.svg'}
                   alt="Initiative"
                 />
               </figure>
@@ -87,7 +86,7 @@ const Initiatives = () => {
               <figure className="h-full w-full">
                 <Image
                   className="object-contain"
-                  src={initiativeImage}
+                  src={'/assets/images/initiative-figure.svg'}
                   alt="Initiative"
                 />
               </figure>
