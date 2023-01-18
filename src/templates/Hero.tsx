@@ -42,6 +42,7 @@ const Hero = () => {
           {headerLinks.map((link) => (
             <li key={link.label}>
               <a
+                className="link"
                 onClick={() =>
                   document.querySelector(link.href)?.scrollIntoView({
                     behavior: 'smooth',
@@ -53,7 +54,7 @@ const Hero = () => {
             </li>
           ))}
           <li>
-            <a className="dropdown dropdown-hover link">
+            <a className=" link dropdown dropdown-hover">
               <label tabIndex={0} className="m-1">
                 Resources
               </label>
@@ -69,6 +70,7 @@ const Hero = () => {
 
           <style jsx>{`
             .link {
+              @apply cursor-pointer;
               text-decoration: none;
             }
             .link:hover {
@@ -94,7 +96,16 @@ const Hero = () => {
               <span className="text-[#F85C3A]">inGlo</span>
             </>
           }
-          description="Leading the Way in Healthcare Investing: We Offer Exceptional Returns for Investors and Companies"
+          description={
+            <>
+              <div>
+                {' '}
+                Leading the Way in Healthcare Investing:
+                <br />
+                We Offer Exceptional Returns for Investors and Companies
+              </div>
+            </>
+          }
           button={
             <div className="">
               <div className="text-2xl font-bold mb-6 text-black">

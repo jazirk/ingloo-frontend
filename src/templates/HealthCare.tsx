@@ -4,7 +4,7 @@ import { Section } from '../layout/Section';
 import { HealthCareChart } from '../ui-components/HealthCareChart';
 
 const styles = {
-  backgroundImage: `url(${healthCareSvg})`,
+  backgroundImage: `url(${healthCareSvg.src})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   height: '800px',

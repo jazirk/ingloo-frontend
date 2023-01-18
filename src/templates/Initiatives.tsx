@@ -11,6 +11,45 @@ const styles = {
   backgroundSize: 'cover',
 };
 
+const initiatives = [
+  {
+    id: 1,
+    initiative: 'inVite',
+    initiativeLogo: '/assets/images/invite.svg',
+    mainImage: '/assets/images/initiative-figure.svg',
+    title: 'Explore healthcare investment opportunities',
+    description:
+      'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
+    action: 'Join Hub',
+    actionLink: '#',
+    bgColor: '#4056F4',
+  },
+  {
+    id: 2,
+    initiative: 'smarGlo',
+    initiativeLogo: '/assets/images/invite.svg',
+    mainImage: '/assets/images/initiative-figure.svg',
+    title: 'Explore healthcare investment opportunities',
+    description:
+      'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
+    action: 'Join Hub',
+    actionLink: '#',
+    bgColor: '#F85C3A',
+  },
+  {
+    id: 3,
+    initiative: 'smarGlo',
+    initiativeLogo: '/assets/images/invite.svg',
+    mainImage: '/assets/images/initiative-figure.svg',
+    title: 'Explore healthcare investment opportunities',
+    description:
+      'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
+    action: 'Join Hub',
+    actionLink: '#',
+    bgColor: '#FFAE03',
+  },
+];
+
 const Initiatives = () => {
   return (
     <Background color="bg-white">
@@ -24,97 +63,46 @@ const Initiatives = () => {
             tristique tellus. Arcu lacinia tempus massa non. Faucibus semper
             mattis amet amet mauris est condimentum dignissim.
           </p>
-          <Carousel itemWidth="w-3/4">
-            <Card clasName="p-6 bg-[#4056F4]">
-              <figure className="h-full w-full">
-                <Image
-                  className="object-contain"
-                  src={'/assets/images/initiative-figure.svg'}
-                  alt="Initiative"
-                />
-              </figure>
-              <div className="card-body text-white">
-                <div className="flex items-center">
-                  <Image src={'/assets/images/invite.svg'} alt="InVite" />
-                  <span>inVite</span>
-                </div>
-
-                <h2 className="font-bold">
-                  Explore healthcare investment opportunities{' '}
-                </h2>
-                <p>
-                  Navigating the Healthcare Market for Investment Opportunities
-                  with Favorable Risk-Return Profiles
-                </p>
-                <div className="card-actions justify-start cursor-pointer">
-                  <div className="font-bold">Join Hub</div>
+          <Carousel itemWidth="w-1/2">
+            {initiatives.map((initiative) => (
+              <Card
+                clasName={`p-6 bg-[${initiative.bgColor}] lg:flex`}
+                key={initiative.id}
+              >
+                <figure>
                   <Image
-                    src={'/assets/images/arrow-right-line.svg'}
-                    alt="arrow-right"
+                    width="600px"
+                    height="600px"
+                    src={initiative.mainImage}
+                    alt="Initiative"
+                    objectFit="cover"
                   />
-                </div>
-              </div>
-            </Card>
-            <Card clasName="p-6 bg-[#F85C3A]">
-              <figure className="h-full w-full">
-                <Image
-                  className="object-contain"
-                  src={'/assets/images/initiative-figure.svg'}
-                  alt="Initiative"
-                />
-              </figure>
-              <div className="card-body text-white">
-                <div className="flex items-center">
-                  <Image src={'/assets/images/invite.svg'} alt="InVite" />
-                  <span>smartGlo</span>
-                </div>
+                </figure>
+                <div className="card-body text-white">
+                  <div className="flex items-center">
+                    <Image
+                      src={initiative.initiativeLogo}
+                      alt={initiative.initiative}
+                      width="40px"
+                      height="40px"
+                    />
+                    <span className="text-2xl">{initiative.initiative}</span>
+                  </div>
 
-                <h2 className="font-bold">
-                  Explore healthcare investment opportunities{' '}
-                </h2>
-                <p>
-                  Navigating the Healthcare Market for Investment Opportunities
-                  with Favorable Risk-Return Profiles
-                </p>
-                <div className="card-actions justify-start cursor-pointer">
-                  <div className="font-bold">Join Hub</div>
-                  <Image
-                    src={'/assets/images/arrow-right-line.svg'}
-                    alt="arrow-right"
-                  />
+                  <h2 className="font-bold text-2xl">{initiative.title}</h2>
+                  <p>{initiative.description}</p>
+                  <div className="card-actions  flex justify-start items-center cursor-pointer">
+                    <div className="font-bold">Join Hub</div>
+                    <Image
+                      src={'/assets/images/arrow-right-line.svg'}
+                      alt="arrow-right"
+                      width="20px"
+                      height="20px"
+                    />
+                  </div>
                 </div>
-              </div>
-            </Card>
-            <Card clasName="p-6 bg-[#FFAE03]">
-              <figure className="h-full w-full">
-                <Image
-                  className="object-contain"
-                  src={'/assets/images/initiative-figure.svg'}
-                  alt="Initiative"
-                />
-              </figure>
-              <div className="card-body text-white">
-                <div className="flex items-center">
-                  <Image src={'/assets/images/invite.svg'} alt="InVite" />
-                  <span>smartGlo</span>
-                </div>
-
-                <h2 className="font-bold">
-                  Explore healthcare investment opportunities{' '}
-                </h2>
-                <p>
-                  Navigating the Healthcare Market for Investment Opportunities
-                  with Favorable Risk-Return Profiles
-                </p>
-                <div className="card-actions justify-start cursor-pointer">
-                  <div className="font-bold">Join Hub</div>
-                  <Image
-                    src={'/assets/images/arrow-right-line.svg'}
-                    alt="arrow-right"
-                  />
-                </div>
-              </div>
-            </Card>
+              </Card>
+            ))}
           </Carousel>
         </div>
       </Section>

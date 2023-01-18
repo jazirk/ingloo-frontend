@@ -7,7 +7,7 @@ import { Button } from '../button/Button';
 import { Section } from '../layout/Section';
 
 const styles = {
-  backgroundImage: `url(${contactUsBg})`,
+  backgroundImage: `url(${contactUsBg.src})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   maxHeight: '400px',

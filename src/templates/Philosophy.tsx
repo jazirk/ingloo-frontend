@@ -12,7 +12,7 @@ import { Section } from '../layout/Section';
 
 const Philiosophy = () => (
   <Background color="bg-white border border-[#E0E0E0]">
-    <Section yPadding="py-20" xPadding="px-20">
+    <Section yPadding="pt-20" xPadding="px-20">
       <div className="grid grid-cols-2 w-full relative">
         <div className="flex flex-col gap-5 justify-start items-start text-black">
           <h1 className="font-bold ">Investment Philosophy</h1>
@@ -66,7 +66,11 @@ const Philiosophy = () => (
             </div>
           </div>
           <div className="flex gap-5">
-            <Image src={timelineCheck} alt="Timeline Check" />
+            <Image
+              style={{ alignSelf: 'flex-start' }}
+              src={timelineCheck}
+              alt="Timeline Check"
+            />
             <div>
               <h1 className="font-semibold">Company Auditing</h1>
               <p className="max-w-prose">
