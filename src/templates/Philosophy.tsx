@@ -13,28 +13,26 @@ import { Section } from '../layout/Section';
 const Philiosophy = () => (
   <Background color="bg-white border border-[#E0E0E0]">
     <Section yPadding="pt-20" xPadding="px-20">
-      <div className="grid grid-cols-2 w-full relative">
+      <div className="grid lg:grid-cols-2 gap-10 w-full relative">
         <div className="flex flex-col gap-5 justify-start items-start text-black">
           <h1 className="font-bold ">Investment Philosophy</h1>
 
-          <h2 className="font-bold text-4xl">
-            How do we choose <br />
-            whom to fund?
+          <h2 className="font-bold text-4xl w-full lg:max-w-md">
+            How do we choose whom to fund?
           </h2>
-          <p className="text-black">
-            We look for Grit of the team and your ability to <br />
-            withstand adversity. We recommend at least one <br />
-            of the co-founders to show background <br />
-            in Healthcare since we believe that it’s a unique <br />
-            market and with its own regulatory and process challenges.
+          <p className="text-black lg:max-w-md">
+            We look for Grit of the team and your ability to withstand
+            adversity. We recommend at least one of the co-founders to show
+            background in Healthcare since we believe that it’s a unique market
+            and with its own regulatory and process challenges.
           </p>
           <Button secondary rounded>
             <Image src={pitch} alt="Pitch" />
             Pitch Now
           </Button>
         </div>
-        <div className="text-base text-black mt-16 lg:mt-0 ">
-          <div className="flex gap-5">
+        <div className="text-base text-black lg:mt-0 flex flex-col gap-10">
+          <div className="flex gap-5 items-start">
             <Image src={timelineStar} alt="Timeline Star" />
             <div>
               <h1 className="font-semibold">Initial Rating</h1>
@@ -65,7 +63,7 @@ const Philiosophy = () => (
               </p>
             </div>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-start">
             <Image
               style={{ alignSelf: 'flex-start' }}
               src={timelineCheck}

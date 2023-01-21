@@ -16,6 +16,7 @@ import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { Navbar } from '../navigation/Navbar';
+import Menu from '../ui-components/Menu';
 import { headerLinks } from '../utils/HeadeLink';
 
 const Hero = () => {
@@ -25,22 +26,29 @@ const Hero = () => {
 
   return (
     <Background color="bg-white">
-      <Section yPadding="py-4" border="border-b border-b-[#E0E0E0]">
+      <Section
+        yPadding="py-2"
+        xPadding="px-2 lg:px-4"
+        border="border-b border-b-[#E0E0E0]"
+      >
         <Navbar
           logo={logo}
           button={
-            <Button
-              rounded
-              onMouseOver={() => setSigninImageSrc(signinLogoWhite)}
-              onMouseLeave={() => setSigninImageSrc(signinLogo)}
-            >
-              <Image src={signinImageSrc} alt="Signin" />
-              Sign in
-            </Button>
+            <div className="flex items-center justify-center gap-2">
+              <Button
+                rounded
+                onMouseOver={() => setSigninImageSrc(signinLogoWhite)}
+                onMouseLeave={() => setSigninImageSrc(signinLogo)}
+              >
+                <Image src={signinImageSrc} alt="Signin" />
+                Sign in
+              </Button>
+              <Menu />
+            </div>
           }
         >
           {headerLinks.map((link) => (
-            <li key={link.label}>
+            <li className="hidden lg:block" key={link.label}>
               <a
                 className="link"
                 onClick={() =>
@@ -53,7 +61,7 @@ const Hero = () => {
               </a>
             </li>
           ))}
-          <li>
+          <li className="lg:block hidden">
             <a className=" link dropdown dropdown-hover">
               <label tabIndex={0} className="m-1">
                 Resources
@@ -107,7 +115,7 @@ const Hero = () => {
             </>
           }
           button={
-            <div className="">
+            <div className="mb-10">
               <div className="text-2xl font-bold mb-6 text-black">
                 Choose your journey
               </div>
@@ -140,9 +148,7 @@ const Hero = () => {
               </div>
             </div>
           }
-          image={
-            <Image src={heroImage} alt="Hero Image" className="mx-auto mt-16" />
-          }
+          image={<Image src={heroImage} alt="Hero Image" />}
         />
       </Section>
     </Background>

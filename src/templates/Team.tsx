@@ -5,7 +5,7 @@ import { ProfileCard } from '../ui-components/ProfileCard';
 import { TeamMembers } from '../utils/Team';
 
 const styles = {
-  backgroundImage: `url(${teamBg})`,
+  backgroundImage: `url(${teamBg.src})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   minHeight: '800px',

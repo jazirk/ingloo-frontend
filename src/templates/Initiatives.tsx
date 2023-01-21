@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';
@@ -16,37 +17,37 @@ const initiatives = [
     id: 1,
     initiative: 'inVite',
     initiativeLogo: '/assets/images/invite.svg',
-    mainImage: '/assets/images/initiative-figure.svg',
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
     action: 'Join Hub',
     actionLink: '#',
-    bgColor: '#4056F4',
+    bgColor: 'bg-primary-blue',
   },
   {
     id: 2,
     initiative: 'smarGlo',
     initiativeLogo: '/assets/images/invite.svg',
-    mainImage: '/assets/images/initiative-figure.svg',
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
     action: 'Join Hub',
     actionLink: '#',
-    bgColor: '#F85C3A',
+    bgColor: 'bg-primary-orange',
   },
   {
     id: 3,
     initiative: 'smarGlo',
     initiativeLogo: '/assets/images/invite.svg',
-    mainImage: '/assets/images/initiative-figure.svg',
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
     action: 'Join Hub',
     actionLink: '#',
-    bgColor: '#FFAE03',
+    bgColor: 'bg-primary-yellow',
   },
 ];
 
@@ -58,21 +59,19 @@ const Initiatives = () => {
           <h1 className="font-semibold text-5xl text-white mt-16 lg:mt-0 ">
             Our Initiatives
           </h1>
-          <p className="text-white w-1/3">
+          <p className="text-white lg:w-1/3 w-full pr-10">
             Lorem ipsum dolor sit amet consectetur. Mollis volutpat elit
             tristique tellus. Arcu lacinia tempus massa non. Faucibus semper
             mattis amet amet mauris est condimentum dignissim.
           </p>
-          <Carousel itemWidth="w-1/2">
+          <Carousel itemWidth="basis-1/2 grow">
             {initiatives.map((initiative) => (
               <Card
-                clasName={`p-6 bg-[${initiative.bgColor}] lg:flex`}
+                clasName={`${initiative.bgColor} p-6 lg:flex`}
                 key={initiative.id}
               >
                 <figure>
                   <Image
-                    width="600px"
-                    height="600px"
                     src={initiative.mainImage}
                     alt="Initiative"
                     objectFit="cover"

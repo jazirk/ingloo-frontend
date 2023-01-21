@@ -10,7 +10,6 @@ const styles = {
   backgroundImage: `url(${contactUsBg.src})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-  maxHeight: '400px',
 };
 
 const ContactUs = () => (
@@ -18,12 +17,12 @@ const ContactUs = () => (
     <Section yPadding="py-0" xPadding="px-0">
       <div
         style={styles}
-        className="flex flex-col gap-3 justify-center items-start pl-10 text-white h-[553px] min-h-[553px] max-h-[553px]"
+        className="flex flex-col gap-8 justify-center items-start pl-10 text-white h-[600px] lg:h-[600px]"
       >
-        <p className="text-white font-bold w-1/3 text-4xl">
+        <p className="text-white font-bold w-full pr-10 lg:w-1/3 text-4xl">
           Let’s Work towards better healthcare for a billion people
         </p>
-        <p className="text-white w-1/2 ">
+        <p className="text-white w-full pr-10 lg:w-1/2 ">
           Healthcare is a fundamental human right, and we are committed to
           supporting companies that are working towards improving healthcare for
           all. We are dedicated to this cause.

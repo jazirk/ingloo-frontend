@@ -9,7 +9,7 @@ const Footer = () => (
   <Background color="bg-[#16181D]">
     <Section yPadding="p-10" xPadding="p-10">
       <div>
-        <div className="flex border-b-2 justify-between items-start border-gray-800">
+        <div className="flex flex-col lg:flex-row justify-between items-start  border-gray-800">
           <div className="flex flex-col items-start gap-5 w-1/2 text-white pb-10">
             <Image src={Logo} alt="Logo" className="w-[200px]" />
             <h2 className="font-bold">Address :</h2>
@@ -46,7 +46,8 @@ const Footer = () => (
             </ul>
           </div>
         </div>
-        <div className="flex justify-between items-center mt-10 text-[#979DAF] pb-10">
+        <div className="border b-2  border-gray-800 mt-10"></div>
+        <div className="flex justify-between items-center mt-10 text-[#979DAF] pb-10 flex-col md:flex-row lg:flex-row  gap-10">
           <div>2022 InGlo Capital. All right reserved.</div>
           <div className="flex gap-10">
             <a href="#">Terms of Use</a>
