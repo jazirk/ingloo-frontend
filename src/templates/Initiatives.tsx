@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
+// import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';
@@ -17,7 +17,7 @@ const initiatives = [
     id: 1,
     initiative: 'inVite',
     initiativeLogo: '/assets/images/invite.svg',
-    mainImage: initiativeFigure,
+    mainImage: '/assets/images/initiative-figure.svg',
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -29,7 +29,7 @@ const initiatives = [
     id: 2,
     initiative: 'smarGlo',
     initiativeLogo: '/assets/images/invite.svg',
-    mainImage: initiativeFigure,
+    mainImage: '/assets/images/initiative-figure.svg',
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -41,7 +41,7 @@ const initiatives = [
     id: 3,
     initiative: 'smarGlo',
     initiativeLogo: '/assets/images/invite.svg',
-    mainImage: initiativeFigure,
+    mainImage: '/assets/images/initiative-figure.svg',
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -74,6 +74,8 @@ const Initiatives = () => {
                   <Image
                     src={initiative.mainImage}
                     alt="Initiative"
+                    width="400px"
+                    height="400px"
                     objectFit="cover"
                   />
                 </figure>
