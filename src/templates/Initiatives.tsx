@@ -1,7 +1,5 @@
 import Image from 'next/image';
 
-import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
-import invite from '../../public/assets/images/invite.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';
@@ -17,8 +15,8 @@ const initiatives = [
   {
     id: 1,
     initiative: 'inVite',
-    initiativeLogo: invite.src,
-    mainImage: initiativeFigure.src,
+    initiativeLogo: '../../public/assets/images/invite.svg',
+    mainImage: '../../public/assets/images/initiative-figure.svg',
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -29,8 +27,8 @@ const initiatives = [
   {
     id: 2,
     initiative: 'smarGlo',
-    initiativeLogo: invite.src,
-    mainImage: initiativeFigure.src,
+    initiativeLogo: '../../public/assets/images/invite.svg',
+    mainImage: '../../public/assets/images/initiative-figure.svg',
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -41,8 +39,8 @@ const initiatives = [
   {
     id: 3,
     initiative: 'smarGlo',
-    initiativeLogo: invite.src,
-    mainImage: initiativeFigure.src,
+    initiativeLogo: '../../public/assets/images/invite.svg',
+    mainImage: '../../public/assets/images/initiative-figure.svg',
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
