@@ -17,8 +17,8 @@ const initiatives = [
   {
     id: 1,
     initiative: 'inVite',
-    initiativeLogo: '../../public/assets/images/invite.svg',
-    mainImage: '../../public/assets/images/initiative-figure.svg',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -29,8 +29,8 @@ const initiatives = [
   {
     id: 2,
     initiative: 'smarGlo',
-    initiativeLogo: '../../public/assets/images/invite.svg',
-    mainImage: '../../public/assets/images/initiative-figure.svg',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -41,8 +41,8 @@ const initiatives = [
   {
     id: 3,
     initiative: 'smarGlo',
-    initiativeLogo: '../../public/assets/images/invite.svg',
-    mainImage: '../../public/assets/images/initiative-figure.svg',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
