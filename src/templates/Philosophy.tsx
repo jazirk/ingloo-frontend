@@ -53,7 +53,7 @@ const Philiosophy = () => (
               </p>
             </div>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-start">
             <Image src={timelineDollar} alt="Timeline Dollar" />
             <div>
               <h1 className="font-semibold">Initial Rating</h1>

@@ -17,7 +17,6 @@ import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { Navbar } from '../navigation/Navbar';
-import Menu from '../ui-components/Menu';
 import { headerLinks } from '../utils/HeadeLink';
 
 const Hero = () => {
@@ -49,7 +48,7 @@ const Hero = () => {
                 <Image src={signinImageSrc} alt="Signin" />
                 Sign in
               </Button>
-              <Menu />
+              {/* <Menu /> */}
             </div>
           }
         >
