@@ -12,7 +12,7 @@ const ProfileCard = ({ user }: ProfileCardProps) => {
 
   return (
     <div
-      className={`card w-full lm:basis-80 md:basis-80 grow lg:grow-0 bg-white shadow-xl p-10 ${profileClass}`}
+      className={`card w-full md:basis-[25rem] grow lg:grow-0 bg-white shadow-xl p-10 ${profileClass}`}
     >
       <figure>
         <Image src={user.image} alt="Profile Pic" />

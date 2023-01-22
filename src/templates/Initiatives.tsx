@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
-// import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
+import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
+import invite from '../../public/assets/images/invite.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';
@@ -16,8 +17,8 @@ const initiatives = [
   {
     id: 1,
     initiative: 'inVite',
-    initiativeLogo: '/assets/images/invite.svg',
-    mainImage: '/assets/images/initiative-figure.svg',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -28,8 +29,8 @@ const initiatives = [
   {
     id: 2,
     initiative: 'smarGlo',
-    initiativeLogo: '/assets/images/invite.svg',
-    mainImage: '/assets/images/initiative-figure.svg',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -40,8 +41,8 @@ const initiatives = [
   {
     id: 3,
     initiative: 'smarGlo',
-    initiativeLogo: '/assets/images/invite.svg',
-    mainImage: '/assets/images/initiative-figure.svg',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
     title: 'Explore healthcare investment opportunities',
     description:
       'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
@@ -55,7 +56,10 @@ const Initiatives = () => {
   return (
     <Background color="bg-white">
       <Section yPadding="py-0" xPadding="px-0" id="initiatives">
-        <div style={styles} className="flex flex-col gap-5 p-4 lg:pl-16">
+        <div
+          style={styles}
+          className="flex flex-col gap-5 pl-10 pr-10 lg:pr-0 lg:pt-20 pb-20"
+        >
           <h1 className="font-semibold text-5xl text-white mt-16 lg:mt-0 ">
             Our Initiatives
           </h1>
@@ -72,7 +76,7 @@ const Initiatives = () => {
               >
                 <figure>
                   <Image
-                    src={initiative.mainImage}
+                    src={initiativeFigure}
                     alt="Initiative"
                     width="400px"
                     height="400px"
@@ -82,7 +86,7 @@ const Initiatives = () => {
                 <div className="card-body text-white">
                   <div className="flex items-center">
                     <Image
-                      src={initiative.initiativeLogo}
+                      src={invite}
                       alt={initiative.initiative}
                       width="40px"
                       height="40px"
