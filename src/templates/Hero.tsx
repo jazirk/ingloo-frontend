@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import companyLogo from '../../public/assets/images/company.svg';
 import companyLogoWhite from '../../public/assets/images/company_white.svg';
@@ -24,6 +25,8 @@ const Hero = () => {
   const [investorImageSrc, setInvestorImageSrc] = useState(investorLogo);
   const [companyImageSrc, setCompanyImageSrc] = useState(companyLogo);
 
+  const router = useRouter();
+
   return (
     <Background color="bg-white">
       <Section
@@ -34,7 +37,10 @@ const Hero = () => {
         <Navbar
           logo={logo}
           button={
-            <div className="flex items-center justify-center gap-2">
+            <div
+              className="flex items-center justify-center gap-2"
+              onClick={() => router.push('/login')}
+            >
               <Button
                 rounded
                 onMouseOver={() => setSigninImageSrc(signinLogoWhite)}
@@ -120,7 +126,7 @@ const Hero = () => {
                 Choose your journey
               </div>
               <div className="flex text-black">
-                <Link href="/">
+                <Link href="/signup?user=investor">
                   <a>
                     <div
                       onMouseOver={() => setInvestorImageSrc(investorLogoWhite)}
@@ -133,7 +139,7 @@ const Hero = () => {
                   </a>
                 </Link>
                 <div className="border border-[#979DAF] mt-2 mb-2" />
-                <Link href="/">
+                <Link href="/signup?user=company">
                   <a>
                     <div
                       onMouseOver={() => setCompanyImageSrc(companyLogoWhite)}

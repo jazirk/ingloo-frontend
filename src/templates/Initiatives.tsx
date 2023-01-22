@@ -55,7 +55,7 @@ const Initiatives = () => {
   return (
     <Background color="bg-white">
       <Section yPadding="py-0" xPadding="px-0" id="initiatives">
-        <div style={styles} className="flex flex-col gap-5 pl-10 pt-20 pb-20">
+        <div style={styles} className="flex flex-col gap-5 p-4 lg:pl-16">
           <h1 className="font-semibold text-5xl text-white mt-16 lg:mt-0 ">
             Our Initiatives
           </h1>

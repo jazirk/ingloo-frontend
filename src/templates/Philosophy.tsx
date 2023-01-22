@@ -12,7 +12,7 @@ import { Section } from '../layout/Section';
 
 const Philiosophy = () => (
   <Background color="bg-white border border-[#E0E0E0]">
-    <Section yPadding="pt-20" xPadding="px-20">
+    <Section yPadding="pt-4 lg:pt-16" xPadding="px-6 lg:px-10">
       <div className="grid lg:grid-cols-2 gap-10 w-full relative">
         <div className="flex flex-col gap-5 justify-start items-start text-black">
           <h1 className="font-bold ">Investment Philosophy</h1>
