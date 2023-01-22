@@ -74,7 +74,8 @@ const Initiatives = () => {
               >
                 <figure>
                   <Image
-                    src={initiative.mainImage}
+                    // src={initiative.mainImage}
+                    src={'../../public/assets/images/initiative-figure.svg'}
                     alt="Initiative"
                     width="400px"
                     height="400px"
@@ -84,7 +85,8 @@ const Initiatives = () => {
                 <div className="card-body text-white">
                   <div className="flex items-center">
                     <Image
-                      src={initiative.initiativeLogo}
+                      // src={initiative.initiativeLogo}
+                      src={'../../public/assets/images/invite.svg'}
                       alt={initiative.initiative}
                       width="40px"
                       height="40px"
