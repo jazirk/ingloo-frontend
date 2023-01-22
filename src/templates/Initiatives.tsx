@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
+import invite from '../../public/assets/images/invite.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';
@@ -74,8 +76,7 @@ const Initiatives = () => {
               >
                 <figure>
                   <Image
-                    // src={initiative.mainImage}
-                    src={'/assets/images/initiative-figure.svg'}
+                    src={initiativeFigure}
                     alt="Initiative"
                     width="400px"
                     height="400px"
@@ -85,8 +86,7 @@ const Initiatives = () => {
                 <div className="card-body text-white">
                   <div className="flex items-center">
                     <Image
-                      // src={initiative.initiativeLogo}
-                      src={'/assets/images/invite.svg'}
+                      src={invite}
                       alt={initiative.initiative}
                       width="40px"
                       height="40px"
