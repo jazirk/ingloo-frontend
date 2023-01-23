@@ -47,7 +47,7 @@ const SignUpCard = () => {
       <ButtonGroup
         selected={userType || 'investor'}
         // updateSelected="updateSelectedUser"
-      ></ButtonGroup>
+      />
       <div className="border-gray-400 border-b-2 w-full max-w-xl"></div>
       {userType === 'investor' ? (
         <div className="w-full flex justify-center items-center flex-col gap-2">
