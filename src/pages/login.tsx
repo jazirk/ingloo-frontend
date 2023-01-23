@@ -31,7 +31,7 @@ const Login = () => {
         <div className="border-t-2 border-t-[#E0E0E0]"></div>
         <main
           style={style}
-          className="flex items-center justify-center flex-col gap-5 h-100 lg:h-screen mt-6 lg:mt-0"
+          className="flex items-center lg:justify-center flex-col gap-5 h-[100%] lg:h-screen mt-6 lg:mt-0"
         >
           {isLogin ? <LoginCard /> : <SignUpCard />}
           {isLogin ? <SignUpTitle /> : <LoginTitle />}
