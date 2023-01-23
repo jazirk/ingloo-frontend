@@ -17,7 +17,7 @@ const HealthCare = () => (
         <h3 className="text-white font-bold text-5xl leading-none mt-4 mb-6 pr-4 text-center">
           Healthcare market oppurtinities
         </h3>
-        <p className="text-white px-10">
+        <p className="text-white px-10 text-center lg:text-left">
           We work closely with our portfolio companies to provide not just
           financial <br /> support, but also strategic guidance and resources to
           help them succeed.
