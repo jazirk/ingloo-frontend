@@ -13,7 +13,7 @@ type IButtonGroupProps = {
 };
 
 // eslint-disable-next-line unused-imports/no-unused-vars
-const ButtonGroup = ({ selected }: IButtonGroupProps) => {
+const ButtonGroup = ({ selected, updateSelected }: IButtonGroupProps) => {
   const [selectedUserType, setSelectedUserType] = useState(selected);
   const [investorImageSrc, setInvestorImageSrc] = useState(
     selected === 'investor' ? investorLogoWhite : investorLogo
@@ -24,9 +24,9 @@ const ButtonGroup = ({ selected }: IButtonGroupProps) => {
 
   const onUserTypeChange = (userType: 'investor' | 'company' | undefined) => {
     setSelectedUserType(userType);
-    // if (updateSelected) {
-    //   updateSelected(userType);
-    // }
+    if (updateSelected) {
+      updateSelected(userType);
+    }
 
     if (userType === 'investor') {
       setInvestorImageSrc(investorLogoWhite);
