@@ -31,7 +31,7 @@ const Login = () => {
         <div className="border-t-2 border-t-[#E0E0E0]"></div>
         <main
           style={style}
-          className="flex items-center justify-center flex-col gap-5 h-screen"
+          className="flex items-center lg:justify-center flex-col gap-5 h-[100%] lg:h-screen mt-6 lg:mt-0"
         >
           {isLogin ? <LoginCard /> : <SignUpCard />}
           {isLogin ? <SignUpTitle /> : <LoginTitle />}
@@ -41,7 +41,7 @@ const Login = () => {
               Sign up
             </a>
           </div> */}
-          <footer className="flex flex-col items-center justify-center text-black">
+          <footer className="flex flex-col items-center justify-center text-black px-4 mb-12 lg:mb-0">
             <p>&copy; 2023 Inglo Capital</p>
             <p className="text-center">
               By processing futher, I agree to Inglo{' '}

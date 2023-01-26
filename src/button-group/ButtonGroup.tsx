@@ -42,20 +42,20 @@ const ButtonGroup = ({ selected }: IButtonGroupProps) => {
   }, [selected]);
 
   return (
-    <div className={`flex text-black`}>
+    <div className={`flex`}>
       <a onClick={() => onUserTypeChange('investor')}>
         <div
-          className={`text-white flex gap-2 font-normal border border-[#979DAF] border-r-0 rounded-l-full py-4 px-8 ${
+          className={`flex gap-2 font-normal border border-[#979DAF] border-r-0 rounded-l-full py-4 px-8 ${
             selectedUserType === 'investor'
               ? 'bg-[#F85C3A] text-white'
               : 'text-black'
-          }}`}
+          }`}
         >
           <Image src={investorImageSrc} alt="Investor" />
           Investor
         </div>
       </a>
-      <div className="border border-[#979DAF] mt-2 mb-2" />
+      {/* <div className="border border-[#979DAF] mt-2 mb-2" /> */}
       <a onClick={() => onUserTypeChange('company')}>
         <div
           className={`flex gap-2 font-normal border border-[#979DAF] border-l-0 rounded-r-full py-4 px-8 ${
