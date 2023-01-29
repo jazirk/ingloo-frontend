@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import healthCareChart from '../../public/assets/images/heathcare_chart.svg';
 
 interface HealthCareChartProps {
@@ -5,8 +7,8 @@ interface HealthCareChartProps {
 }
 
 const HealthCareChart = (props: HealthCareChartProps) => (
-  <img
-    src={healthCareChart.src}
+  <Image
+    src={healthCareChart}
     alt="Healthcare Chart"
     className={props.className}
   />

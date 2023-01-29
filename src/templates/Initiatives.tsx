@@ -1,116 +1,118 @@
-import arrowRight from '../../public/assets/images/arrow-right-line.svg';
-import inittiativeImage from '../../public/assets/images/initiative-figure.svg';
-import initiatives from '../../public/assets/images/initiatives.svg';
-import inVite from '../../public/assets/images/inVite.svg';
+import Image from 'next/image';
+
+import initiativeFigure from '../../public/assets/images/initiative-figure.svg';
+import invite from '../../public/assets/images/invite.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 import { Card } from '../ui-components/Card';
 import { Carousel } from '../ui-components/Carousel';
 
 const styles = {
-  backgroundImage: `url(${initiatives.src})`,
+  backgroundImage: `url(${'/assets/images/initiatives.svg'})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
 };
 
-const Initiatives = () => (
-  <Background color="bg-white">
-    <Section yPadding="py-0" xPadding="px-0" id="initiatives">
-      <div style={styles} className="flex flex-col gap-5 pl-10 pt-20 pb-20">
-        <h1 className="font-semibold text-5xl text-white mt-16 lg:mt-0 ">
-          Our Initiatives
-        </h1>
-        <p className="text-white w-1/3">
-          Lorem ipsum dolor sit amet consectetur. Mollis volutpat elit tristique
-          tellus. Arcu lacinia tempus massa non. Faucibus semper mattis amet
-          amet mauris est condimentum dignissim.
-        </p>
-        <Carousel itemWidth="w-3/4">
-          <Card clasName="p-6 bg-[#4056F4]">
-            <figure className="h-full w-full">
-              <img
-                className="object-contain"
-                src={inittiativeImage.src}
-                alt="Initiative"
-              />
-            </figure>
-            <div className="card-body text-white">
-              <div className="flex items-center">
-                <img src={inVite.src} alt="InVite" />
-                <span>inVite</span>
-              </div>
+const initiatives = [
+  {
+    id: 1,
+    initiative: 'inVite',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
+    title: 'Explore healthcare investment opportunities',
+    description:
+      'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
+    action: 'Join Hub',
+    actionLink: '#',
+    bgColor: 'bg-primary-blue',
+  },
+  {
+    id: 2,
+    initiative: 'smarGlo',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
+    title: 'Explore healthcare investment opportunities',
+    description:
+      'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
+    action: 'Join Hub',
+    actionLink: '#',
+    bgColor: 'bg-primary-orange',
+  },
+  {
+    id: 3,
+    initiative: 'smarGlo',
+    initiativeLogo: invite,
+    mainImage: initiativeFigure,
+    title: 'Explore healthcare investment opportunities',
+    description:
+      'Navigating the Healthcare Market for Investment Opportunities with Favorable Risk-Return Profiles',
+    action: 'Join Hub',
+    actionLink: '#',
+    bgColor: 'bg-primary-yellow',
+  },
+];
 
-              <h2 className="font-bold">
-                Explore healthcare investment opportunities{' '}
-              </h2>
-              <p>
-                Navigating the Healthcare Market for Investment Opportunities
-                with Favorable Risk-Return Profiles
-              </p>
-              <div className="card-actions justify-start cursor-pointer">
-                <div className="font-bold">Join Hub</div>
-                <img src={arrowRight.src} alt="arrow-right" />
-              </div>
-            </div>
-          </Card>
-          <Card clasName="p-6 bg-[#F85C3A]">
-            <figure className="h-full w-full">
-              <img
-                className="object-contain"
-                src={inittiativeImage.src}
-                alt="Initiative"
-              />
-            </figure>
-            <div className="card-body text-white">
-              <div className="flex items-center">
-                <img src={inVite.src} alt="InVite" />
-                <span>smartGlo</span>
-              </div>
+const Initiatives = () => {
+  return (
+    <Background color="bg-white">
+      <Section yPadding="py-0" xPadding="px-0" id="initiatives">
+        <div
+          style={styles}
+          className="flex flex-col gap-5 pl-10 pr-10 lg:pr-0 lg:pt-20 pb-20"
+        >
+          <h1 className="font-semibold text-5xl text-white mt-16 lg:mt-0 ">
+            Our Initiatives
+          </h1>
+          <p className="text-white lg:w-1/3 w-full pr-10">
+            Lorem ipsum dolor sit amet consectetur. Mollis volutpat elit
+            tristique tellus. Arcu lacinia tempus massa non. Faucibus semper
+            mattis amet amet mauris est condimentum dignissim.
+          </p>
+          <Carousel itemWidth="basis-1/2 grow">
+            {initiatives.map((initiative) => (
+              <Card
+                clasName={`${initiative.bgColor} p-6 lg:flex`}
+                key={initiative.id}
+              >
+                <figure>
+                  <Image
+                    src={initiativeFigure}
+                    alt="Initiative"
+                    width="400px"
+                    height="400px"
+                    objectFit="cover"
+                  />
+                </figure>
+                <div className="card-body text-white">
+                  <div className="flex items-center">
+                    <Image
+                      src={invite}
+                      alt={initiative.initiative}
+                      width="40px"
+                      height="40px"
+                    />
+                    <span className="text-2xl">{initiative.initiative}</span>
+                  </div>
 
-              <h2 className="font-bold">
-                Explore healthcare investment opportunities{' '}
-              </h2>
-              <p>
-                Navigating the Healthcare Market for Investment Opportunities
-                with Favorable Risk-Return Profiles
-              </p>
-              <div className="card-actions justify-start cursor-pointer">
-                <div className="font-bold">Join Hub</div>
-                <img src={arrowRight.src} alt="arrow-right" />
-              </div>
-            </div>
-          </Card>
-          <Card clasName="p-6 bg-[#FFAE03]">
-            <figure className="h-full w-full">
-              <img
-                className="object-contain"
-                src={inittiativeImage.src}
-                alt="Initiative"
-              />
-            </figure>
-            <div className="card-body text-white">
-              <div className="flex items-center">
-                <img src={inVite.src} alt="InVite" />
-                <span>smartGlo</span>
-              </div>
-
-              <h2 className="font-bold">
-                Explore healthcare investment opportunities{' '}
-              </h2>
-              <p>
-                Navigating the Healthcare Market for Investment Opportunities
-                with Favorable Risk-Return Profiles
-              </p>
-              <div className="card-actions justify-start cursor-pointer">
-                <div className="font-bold">Join Hub</div>
-                <img src={arrowRight.src} alt="arrow-right" />
-              </div>
-            </div>
-          </Card>
-        </Carousel>
-      </div>
-    </Section>
-  </Background>
-);
+                  <h2 className="font-bold text-2xl">{initiative.title}</h2>
+                  <p>{initiative.description}</p>
+                  <div className="card-actions  flex justify-start items-center cursor-pointer">
+                    <div className="font-bold">Join Hub</div>
+                    <Image
+                      src={'/assets/images/arrow-right-line.svg'}
+                      alt="arrow-right"
+                      width="20px"
+                      height="20px"
+                    />
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </Carousel>
+        </div>
+      </Section>
+    </Background>
+  );
+};
 
 export { Initiatives };

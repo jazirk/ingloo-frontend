@@ -19,7 +19,7 @@ const Mission = () => (
         <h1 className="font-semibold text-base text-[#F85C3A] mt-16 lg:mt-0">
           Our Mission
         </h1>
-        <p className="text-white font-bold w-1/3">
+        <p className="text-white font-bold lg:w-1/2 w-3/4">
           At InGlo, our mission is to support and empower Indian startups to
           tackle the healthcare challenges faced by a billion people, while also
           striving to improve the lives of people around the world through

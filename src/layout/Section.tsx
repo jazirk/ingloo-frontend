@@ -7,6 +7,7 @@ type ISectionProps = {
   xPadding?: string;
   children: ReactNode;
   border?: string;
+  height?: string;
   name?: string;
   id?: string | undefined;
 };
@@ -14,9 +15,13 @@ type ISectionProps = {
 const Section = (props: ISectionProps) => (
   <div
     id={props.id}
-    className={`max-w-full px-12 ${props.yPadding ? props.yPadding : 'py-16'} 
-    ${props.xPadding ? props.xPadding : 'px-16'}
-    ${props.border ? props.border : ''}`}
+    className={`max-w-full px-12 ${
+      props.yPadding ? props.yPadding : 'py-8 md:py-16 lg:py-16'
+    } 
+    ${props.xPadding ? props.xPadding : 'px-8 md:px-8 lg:px-8'}
+    ${props.border ? props.border : ''}
+    ${props.height ? props.height : ''}
+    `}
   >
     {(props.title || props.description) && (
       <div className="mb-12 text-center">

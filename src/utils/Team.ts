@@ -7,7 +7,7 @@ export const TeamMembers = [
     role: 'CEO',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl.',
-    image: profilePic.src,
+    image: profilePic,
     twitter: '',
     linkedin: '',
     facebook: '',
@@ -18,7 +18,7 @@ export const TeamMembers = [
     role: 'CEO',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl.',
-    image: profilePic.src,
+    image: profilePic,
     twitter: '',
     linkedin: '',
     facebook: '',
@@ -29,7 +29,7 @@ export const TeamMembers = [
     role: 'CEO',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl.',
-    image: profilePic.src,
+    image: profilePic,
     twitter: '',
     linkedin: '',
     facebook: '',
@@ -40,7 +40,7 @@ export const TeamMembers = [
     role: 'CEO',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl.',
-    image: profilePic.src,
+    image: profilePic,
     twitter: '',
     linkedin: '',
     facebook: '',
@@ -51,7 +51,7 @@ export const TeamMembers = [
     role: 'CEO',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl.',
-    image: profilePic.src,
+    image: profilePic,
     twitter: '',
     linkedin: '',
     facebook: '',
@@ -62,7 +62,7 @@ export const TeamMembers = [
     role: 'CEO',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam massa, nec luctus nisl nisl sit amet nisl.',
-    image: profilePic.src,
+    image: profilePic,
     twitter: '',
     linkedin: '',
     facebook: '',

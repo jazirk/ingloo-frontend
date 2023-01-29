@@ -1,47 +1,73 @@
-import { ReactNode } from 'react';
+import { useEffect, useState } from 'react';
 
-import className from 'classnames';
+import Image from 'next/image';
+
+import companyLogo from '../../public/assets/images/company.svg';
+import companyLogoWhite from '../../public/assets/images/company_white.svg';
+import investorLogo from '../../public/assets/images/investor.svg';
+import investorLogoWhite from '../../public/assets/images/investor_white.svg';
 
 type IButtonGroupProps = {
-  xl?: boolean;
-  multiple?: boolean;
-  rounded?: boolean;
-  children: ReactNode;
+  selected?: 'investor' | 'company';
+  updateSelected?: (userType: 'investor' | 'company' | undefined) => void;
 };
 
-const ButtonGroup = (props: IButtonGroupProps) => {
-  const btnClass = className({
-    btn: true,
-    'btn-xl': props.xl,
-    'btn-base': !props.xl,
-    'btn-primary': true,
-    'btn-group': props.multiple,
-    'btn-rounded': props.rounded,
-  });
+// eslint-disable-next-line unused-imports/no-unused-vars
+const ButtonGroup = ({ selected, updateSelected }: IButtonGroupProps) => {
+  const [selectedUserType, setSelectedUserType] = useState(selected);
+  const [investorImageSrc, setInvestorImageSrc] = useState(
+    selected === 'investor' ? investorLogoWhite : investorLogo
+  );
+  const [companyImageSrc, setCompanyImageSrc] = useState(
+    selected === 'company' ? companyLogoWhite : companyLogo
+  );
+
+  const onUserTypeChange = (userType: 'investor' | 'company' | undefined) => {
+    setSelectedUserType(userType);
+    if (updateSelected) {
+      updateSelected(userType);
+    }
+
+    if (userType === 'investor') {
+      setInvestorImageSrc(investorLogoWhite);
+      setCompanyImageSrc(companyLogo);
+    } else {
+      setInvestorImageSrc(investorLogo);
+      setCompanyImageSrc(companyLogoWhite);
+    }
+  };
+
+  useEffect(() => {
+    onUserTypeChange(selected);
+  }, [selected]);
 
   return (
-    <div className={btnClass}>
-      {props.children}
-
-      <style jsx>
-        {`
-          .btn-group {
-            @apply flex text-center;
-          }
-
-          .btn-group :global(:first-child) {
-            @apply rounded-l-full border-r-0;
-          }
-
-          .btn-group :global(:not(:last-child)) {
-            @apply border-r-0;
-          }
-
-          .btn-group :global(:last-child) {
-            @apply rounded-r-full;
-          }
-        `}
-      </style>
+    <div className={`flex`}>
+      <a onClick={() => onUserTypeChange('investor')}>
+        <div
+          className={`flex gap-2 font-normal border border-[#979DAF] border-r-0 rounded-l-full py-4 px-8 ${
+            selectedUserType === 'investor'
+              ? 'bg-[#F85C3A] text-white'
+              : 'text-black'
+          }`}
+        >
+          <Image src={investorImageSrc} alt="Investor" />
+          Investor
+        </div>
+      </a>
+      {/* <div className="border border-[#979DAF] mt-2 mb-2" /> */}
+      <a onClick={() => onUserTypeChange('company')}>
+        <div
+          className={`flex gap-2 font-normal border border-[#979DAF] border-l-0 rounded-r-full py-4 px-8 ${
+            selectedUserType === 'company'
+              ? 'bg-[#F85C3A] text-white'
+              : 'text-black'
+          }`}
+        >
+          <Image src={companyImageSrc} alt="Company" />
+          Company
+        </div>
+      </a>
     </div>
   );
 };

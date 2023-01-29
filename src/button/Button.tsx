@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import className from 'classnames';
 
-interface IButtonProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   xl?: boolean;
   rounded?: boolean;
   classname?: string;
@@ -26,7 +26,11 @@ const Button = (props: IButtonProps) => {
   const { children, rounded, secondary, transparent, ...rest } = props;
 
   return (
-    <div className={`${btnClass} ${props.classname}`} {...rest}>
+    <button
+      className={`${btnClass} ${props.classname}`}
+      type="submit"
+      {...rest}
+    >
       {children}
 
       <style jsx>
@@ -70,7 +74,7 @@ const Button = (props: IButtonProps) => {
           }
         `}
       </style>
-    </div>
+    </button>
   );
 };
 

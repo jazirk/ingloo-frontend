@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import formedByLogo from '../../public/assets/images/formed-by.svg';
 import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
@@ -19,7 +21,7 @@ const WhatWeDo = () => (
             them succeed.
           </div>
           <div className="flex items-center gap-2 mt-10">
-            <img src={formedByLogo.src} alt="Formed By" />
+            <Image src={formedByLogo} alt="Formed By" />
             <span>Formed by Alumina of INSEAD & IIMs</span>
           </div>
         </div>

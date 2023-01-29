@@ -14,10 +14,10 @@ const HealthCare = () => (
   <Background color="bg-white">
     <Section yPadding="py-0" xPadding="px-0">
       <div style={styles} className="flex flex-col justify-center items-center">
-        <h3 className="text-white font-bold text-5xl leading-none mt-4 mb-6 pr-4">
+        <h3 className="text-white font-bold text-5xl leading-none mt-4 mb-6 pr-4 text-center">
           Healthcare market oppurtinities
         </h3>
-        <p className="text-white">
+        <p className="text-white px-10 text-center lg:text-left">
           We work closely with our portfolio companies to provide not just
           financial <br /> support, but also strategic guidance and resources to
           help them succeed.

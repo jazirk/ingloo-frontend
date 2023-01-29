@@ -1,19 +1,20 @@
 import { ReactNode } from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 type INavbarProps = {
-  logo: string | undefined;
+  logo: string;
   children: ReactNode;
   button?: ReactNode;
 };
 
 const Navbar = (props: INavbarProps) => (
-  <div className="flex flex-wrap justify-between items-center gap-2">
+  <div className="flex flex-wrap justify-between items-center flex-nowrap gap-2 pt-2 pl-4 pr-4">
     <div>
       <Link href="/">
         <a>
-          <img src={props.logo} alt="Logo" />
+          <Image src={props.logo} alt="Logo" />
         </a>
       </Link>
     </div>

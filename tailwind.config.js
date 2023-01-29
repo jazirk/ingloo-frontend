@@ -1,5 +1,6 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
+
   theme: {
     fontSize: {
       xs: '0.75rem',
@@ -13,6 +14,12 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {
       colors: {
         primary: {
@@ -25,6 +32,9 @@ module.exports = {
           700: '#026592',
           800: '#014C6E',
           900: '#013349',
+          orange: '#F85C3A',
+          yellow: '#FFAE03',
+          blue: '#4056F4',
         },
         gray: {
           100: '#f7fafc',

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import companyLogo from '../../public/assets/images/company.svg';
 import companyLogoWhite from '../../public/assets/images/company_white.svg';
@@ -22,25 +24,38 @@ const Hero = () => {
   const [investorImageSrc, setInvestorImageSrc] = useState(investorLogo);
   const [companyImageSrc, setCompanyImageSrc] = useState(companyLogo);
 
+  const router = useRouter();
+
   return (
     <Background color="bg-white">
-      <Section yPadding="py-4" border="border-b border-b-[#E0E0E0]">
+      <Section
+        yPadding="py-2"
+        xPadding="px-2 lg:px-4"
+        border="border-b border-b-[#E0E0E0]"
+      >
         <Navbar
-          logo={logo.src}
+          logo={logo}
           button={
-            <Button
-              rounded
-              onMouseOver={() => setSigninImageSrc(signinLogoWhite)}
-              onMouseLeave={() => setSigninImageSrc(signinLogo)}
+            <div
+              className="flex items-center justify-center gap-2"
+              onClick={() => router.push('/login')}
             >
-              <img src={signinImageSrc.src} alt="Signin" />
-              Sign in
-            </Button>
+              <Button
+                rounded
+                onMouseOver={() => setSigninImageSrc(signinLogoWhite)}
+                onMouseLeave={() => setSigninImageSrc(signinLogo)}
+              >
+                <Image src={signinImageSrc} alt="Signin" />
+                Sign in
+              </Button>
+              {/* <Menu /> */}
+            </div>
           }
         >
           {headerLinks.map((link) => (
-            <li key={link.label}>
+            <li className="hidden lg:block" key={link.label}>
               <a
+                className="link"
                 onClick={() =>
                   document.querySelector(link.href)?.scrollIntoView({
                     behavior: 'smooth',
@@ -51,8 +66,8 @@ const Hero = () => {
               </a>
             </li>
           ))}
-          <li>
-            <a className="dropdown dropdown-hover link">
+          <li className="lg:block hidden">
+            <a className=" link dropdown dropdown-hover">
               <label tabIndex={0} className="m-1">
                 Resources
               </label>
@@ -68,6 +83,7 @@ const Hero = () => {
 
           <style jsx>{`
             .link {
+              @apply cursor-pointer;
               text-decoration: none;
             }
             .link:hover {
@@ -93,38 +109,43 @@ const Hero = () => {
               <span className="text-[#F85C3A]">inGlo</span>
             </>
           }
-          description="Leading the Way in Healthcare Investing: We Offer Exceptional Returns for Investors and Companies"
+          description={
+            <>
+              <div>
+                {' '}
+                Leading the Way in Healthcare Investing:
+                <br />
+                We Offer Exceptional Returns for Investors and Companies
+              </div>
+            </>
+          }
           button={
-            <div className="">
+            <div className="mb-10">
               <div className="text-2xl font-bold mb-6 text-black">
                 Choose your journey
               </div>
               <div className="flex text-black">
-                <Link href="/">
+                <Link href="/signup?user=investor">
                   <a>
                     <div
                       onMouseOver={() => setInvestorImageSrc(investorLogoWhite)}
                       onMouseLeave={() => setInvestorImageSrc(investorLogo)}
                       className="flex gap-2 font-normal border border-[#979DAF] border-r-0 rounded-l-full py-4 px-8 hover:bg-[#F85C3A] hover:text-white"
                     >
-                      <img
-                        src={investorImageSrc.src}
-                        alt="Signin"
-                        className="h-6"
-                      />
+                      <Image src={investorImageSrc} alt="Investor" />
                       Investor
                     </div>
                   </a>
                 </Link>
                 <div className="border border-[#979DAF] mt-2 mb-2" />
-                <Link href="/">
+                <Link href="/signup?user=company">
                   <a>
                     <div
                       onMouseOver={() => setCompanyImageSrc(companyLogoWhite)}
                       onMouseLeave={() => setCompanyImageSrc(companyLogo)}
                       className="flex gap-2 font-normal border border-[#979DAF] border-l-0 rounded-r-full py-4 px-8 hover:bg-[#F85C3A] hover:text-white"
                     >
-                      <img src={companyImageSrc.src} alt="Signin" />
+                      <Image src={companyImageSrc} alt="Company" />
                       Company
                     </div>
                   </a>
@@ -132,13 +153,7 @@ const Hero = () => {
               </div>
             </div>
           }
-          image={
-            <img
-              src={heroImage.src}
-              alt="Hero Image"
-              className="mx-auto mt-16"
-            />
-          }
+          image={<Image src={heroImage} alt="Hero Image" />}
         />
       </Section>
     </Background>

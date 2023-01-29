@@ -11,8 +11,4 @@ export const headerLinks = [
     label: 'Investors',
     href: '/',
   },
-  {
-    label: 'Resources',
-    href: 'null',
-  },
 ];
